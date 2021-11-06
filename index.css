@@ -1,0 +1,262 @@
+* {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.controlpanel {
+  margin: 20vh 0 0 10%;
+  padding: 30px 30px 30px 30px;
+  max-width: 330px;
+  height: 465px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(210, 210, 210);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 210, 210, 1) 0%,
+    rgba(175, 175, 175, 1) 50%,
+    rgba(210, 210, 210, 1) 89%
+  );
+  border: 15px solid rgb(61, 61, 61);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 4px rgb(41, 41, 41);
+}
+
+.display {
+  width: 300px;
+  height: 100px;
+  background: rgb(255, 196, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 196, 0, 1) 0%,
+    rgb(255, 211, 107) 100%
+  );
+  border: 15px solid rgb(61, 61, 61);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px black;
+}
+
+.display p {
+  width: 300px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  font-family: Impact;
+  text-shadow: 3px 3px 3px rgb(143, 117, 32);
+  user-select: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 330px;
+  margin: 25px 0 0 0;
+}
+
+.controllbtn {
+  padding: 18px;
+  margin: 5px 5px 5px 5px;
+  font-size: 25px;
+  font-weight: bold;
+  width: 80px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(255, 233, 193);
+  transition-duration: 0.2s;
+  box-shadow: 1px 1px 5px 2px rgb(97, 97, 97);
+  cursor: pointer;
+}
+
+.controllbtnActivated {
+  background-color: rgb(255, 216, 143);
+  box-shadow: 5px 2px 5px 3px rgb(82, 82, 82);
+  cursor: progress;
+}
+
+.building {
+  margin: 10vh 0 0 10%;
+  background: hotpink;
+  width: 400px;
+  height: 800px;
+  position: relative;
+}
+
+.door {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 50px;
+  height: 100px;
+  background: #cc9966;
+  border: 5px solid #946b42;
+  border-bottom: none;
+}
+
+.door .doorHandle {
+  width: 5px;
+  height: 5px;
+  background-color: #946b42;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 47.5px;
+  right: 10px;
+}
+
+/* 28,5 */
+
+.floor {
+  position: absolute;
+  width: 50px;
+  height: 70px;
+  background: aqua;
+  border: 7px solid brown;
+}
+
+.gridv {
+  position: absolute;
+  height: 70px;
+  width: 7px;
+  left: 21.5px;
+  background: brown;
+}
+
+.gridh {
+  position: absolute;
+  height: 7px;
+  width: 50px;
+  top: 31.5px;
+  background: brown;
+}
+
+.f1 {
+  bottom: 140px;
+  left: 20px;
+}
+
+.f2 {
+  bottom: 250px;
+  left: 20px;
+}
+
+.f3 {
+  bottom: 360px;
+  left: 20px;
+}
+
+.f4 {
+  bottom: 470px;
+  left: 20px;
+}
+
+.f5 {
+  bottom: 580px;
+  left: 20px;
+}
+
+.f6 {
+  bottom: 690px;
+  left: 20px;
+}
+
+.elevator {
+  position: absolute;
+  background: rgb(194, 194, 194);
+  width: 70px;
+  height: 100px;
+  left: 160px;
+  border: 5px solid rgb(73, 73, 73);
+  border-bottom: none;
+}
+
+.elevator .door1 {
+  position: absolute;
+  height: 100px;
+  width: 35px;
+  left: 0;
+  background-color: gray;
+}
+
+.elevator .door2 {
+  position: absolute;
+  height: 100px;
+  width: 35px;
+  right: 0;
+  background-color: gray;
+}
+
+.callbtn button {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: rgb(48, 224, 48);
+}
+
+.floor0 {
+  bottom: 0;
+}
+
+.floor1 {
+  bottom: 120px;
+}
+
+.floor2 {
+  bottom: 230px;
+}
+
+.floor3 {
+  bottom: 340px;
+}
+
+.floor4 {
+  bottom: 450px;
+}
+
+.floor5 {
+  bottom: 560px;
+}
+
+.floor6 {
+  bottom: 670px;
+}
+
+.move1 {
+  transition: bottom 3s;
+}
+
+.move2 {
+  transition: bottom 6s;
+}
+
+.move3 {
+  transition: bottom 9s;
+}
+
+.move4 {
+  transition: bottom 12s;
+}
+
+.move5 {
+  transition: bottom 15s;
+}
+
+.move6 {
+  transition: bottom 18s;
+}
