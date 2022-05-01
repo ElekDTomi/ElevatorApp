@@ -1,5 +1,8 @@
 for (let i = 0; i < 7; i++) {
-  document.querySelector(`.btn${i}`).addEventListener("click", () => {
+  document.querySelectorAll(`.btn${i}`)[0].addEventListener("click", () => {
+    addOrder(i);
+  });
+  document.querySelectorAll(`.btn${i}`)[1].addEventListener("click", () => {
     addOrder(i);
   });
 }
@@ -10,19 +13,14 @@ let prevMove;
 let order = [];
 let switchLet = true;
 
-elevator.addEventListener("transitionend", () => {
-  switchLet = true;
-});
-
 function addOrder(x) {
   if (order[order.length - 1] != x) {
     order.push(x);
     console.log(order);
     document.querySelector(`.btn${x}`).setAttribute("disabled", "");
   }
+  controller();
 }
-
-setInterval(controller, 500);
 
 function controller() {
   if (order.length != 0 && switchLet == true) {
@@ -33,7 +31,6 @@ function controller() {
 }
 
 function move(floor) {
-  console.log(floor);
   let floorMove = prevfloor - floor;
   floorMove = Math.abs(floorMove);
 
@@ -52,5 +49,8 @@ function move(floor) {
     floor = "T";
   }
   display.innerHTML = floor;
-  controller();
+  setTimeout(() => {
+    switchLet = true;
+    controller();
+  }, floorMove * 3000);
 }

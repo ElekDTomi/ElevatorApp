@@ -12,6 +12,17 @@
   flex-direction: row;
 }
 
+.sun {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  position: absolute;
+  top: -125px;
+  left: -125px;
+  background: radial-gradient(orange, yellow, yellow, yellow);
+  box-shadow: 3px 3px 40px yellow;
+}
+
 .controlpanel {
   margin: 20vh 0 0 10%;
   padding: 30px 30px 30px 30px;
